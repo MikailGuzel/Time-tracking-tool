@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="admin-dashboard">
+    <h2>Welcome, [Admin Name]!</h2>
+
+    <div class="menu-bar">
+        <a href="admin.html">Calendar</a>
+        <a href="userAdd.html">Add Users</a>
+        <a href="groups.html">Groups</a>
+        <a href="budgets.html">Budgets</a>
+    </div>
+    <div class="navigation">
+        <button id="prevWeek" class="weekButton">Previous Week</button>
+        <span id="weekRange"></span>
+        <button id="nextWeek" class="weekButton">Next Week</button>
+    </div>
+
+
+    <div class="calendar">
+        <div class="weekdays-container">
+            <div class="weekday-label">Monday</div>
+            <div class="weekday-label">Tuesday</div>
+            <div class="weekday-label">Wednesday</div>
+            <div class="weekday-label">Thursday</div>
+            <div class="weekday-label">Friday</div>
+            <div class="weekday-label">Saturday</div>
+            <div class="weekday-label">Sunday</div>
+        </div>
+        <div class="hours-container">
+            <div class="hour-column"></div>
+            <div class="hour-column"></div>
+            <div class="hour-column"></div>
+            <div class="hour-column"></div>
+            <div class="hour-column"></div>
+            <div class="hour-column"></div>
+            <div class="hour-column"></div>
+        </div>
+    </div>
+</div>
+<div id="event-modal" style="display: none;">
+    <h2>Add Event</h2>
+    <form id="event-form">
+        <label for="event-title">Title:</label>
+        <input type="text" id="event-title" name="event-title">
+
+        <label for="event-date">Date:</label>
+        <input type="date" id="event-date" name="event-date">
+
+        <label for="event-time">Time:</label>
+        <input type="time" id="event-time" name="event-time">
+
+        <input type="submit" value="Add Event">
+    </form>
+    <button id="close-form">Close</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>

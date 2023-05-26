@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="admin-dashboard">
+    <h2>Welcome, [Admin Name]!</h2>
+
+    <div class="menu-bar">
+        <a href="admin.html">Calendar</a>
+        <a href="userAdd.html">Add Users</a>
+        <a href="groups.html">Groups</a>
+        <a href="budgets.html">Budgets</a>
+    </div>
+</div>
+<div class="calculator-container">
+    <h1>Worker Calculator</h1>
+    <form id="calculator-form">
+        <label for="daily-budget">Daily Budget:</label><br>
+        <input type="number" id="daily-budget" name="daily-budget" required><br>
+
+        <label for="hourly-wage">Hourly Wage:</label><br>
+        <input type="number" id="hourly-wage" name="hourly-wage" required><br>
+
+        <label for="work-hours">Work Hours:</label><br>
+        <input type="number" id="work-hours" name="work-hours" required><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+    <div id="result"></div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

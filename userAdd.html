@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="admin-dashboard">
+    <h2>Welcome, [Admin Name]!</h2>
+
+    <div class="menu-bar">
+        <a href="admin.html">Calendar</a>
+        <a href="userAdd.html">Add Users</a>
+        <a href="groups.html">Groups</a>
+        <a href="budgets.html">Budgets</a>
+    </div>
+    </div>
+</div>
+
+<div class="user-form">
+    <h2>Create User</h2>
+    <form id="create-user-form">
+        <label>
+            First Name:
+            <input type="text" id="firstName" required>
+        </label>
+        <label>
+            Last Name:
+            <input type="text" id="lastName" required>
+        </label>
+        <label>
+            Birthday:
+            <input type="date" id="birthday" required>
+        </label>
+        <label>
+            Social Security Number:
+            <input type="password" id="ssn" required>
+        </label>
+        <label>
+            Address:
+            <input type="text" id="address" required>
+        </label>
+        <label>
+            Email:
+            <input type="email" id="email" required>
+        </label>
+        <label>
+            Phone Number:
+            <input type="tel" id="phoneNumber" required>
+        </label>
+        <label>
+            Work Unit:
+            <input type="text" id="workUnit" required>
+        </label>
+        <button type="submit">Create User</button>
+    </form>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

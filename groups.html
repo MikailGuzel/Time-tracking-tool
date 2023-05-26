@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<div class="admin-dashboard">
+    <h2>Welcome, [Admin Name]!</h2>
+
+    <div class="menu-bar">
+        <a href="admin.html">Calendar</a>
+        <a href="userAdd.html">Add Users</a>
+        <a href="groups.html">Groups</a>
+        <a href="budgets.html">Budgets</a>
+    </div><div id="groups">
+        <h3>Groups</h3>
+        <ul id="group-list"></ul>
+    </div>
+    <div id="create-group">
+        <h3>Create New Group</h3>
+        <form>
+            <label for="group-name">Group Name:</label>
+            <input type="text" id="group-name" name="group-name" required>
+            <button type="submit">Create</button>
+        </form>
+    </div>
+    <div id="user-list"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
