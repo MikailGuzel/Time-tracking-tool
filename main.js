@@ -20,6 +20,61 @@ function getRandomString(length) {
     return result;
 }
 
+function createUser() {
+    const createUserForm = document.getElementById('create-user-form');
+    createUserForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const birthday = document.getElementById('birthday').value;
+        const ssn = document.getElementById('ssn').value;
+        const address = document.getElementById('address').value;
+        const email = document.getElementById('email').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const workUnit = document.getElementById('workUnit').value; // Pass the selected group value as a string
+
+        const username = firstName.toLowerCase() + lastName.toLowerCase();
+        const password = getRandomString(10);
+
+        const user = {
+            firstName,
+            lastName,
+            birthday,
+            ssn,
+            address,
+            email,
+            phoneNumber,
+            workUnit, // Pass the selected group value as a string
+            username,
+            password,
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/create-user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(user),
+            });
+            if (response.ok) {
+                alert(`User created!\nUsername: ${username}\nPassword: ${password}`);
+                createUserForm.reset();
+            } else {
+                const data = await response.json();
+                throw new Error(data.error);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
+}
+
+// Call the function to register the event listener
+createUser();
+
+
 // Event listener for the calculator form submission
 document.getElementById('calculator-form').addEventListener('submit', function(event) {
     event.preventDefault();
